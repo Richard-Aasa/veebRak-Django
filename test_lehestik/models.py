@@ -15,3 +15,9 @@ class Dok_Meta(models.Model):
     keeletase = models.CharField(max_length=5)
     haridus = models.CharField(max_length=10)
     abivahendid = models.CharField(max_length=10)
+
+    def __str__(self):
+        return '%s(%s)' % (
+            type(self).__name__,
+            ', '.join('%s=%s' % item for item in vars(self).items())
+        )
