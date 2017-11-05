@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h2>Hello World</h2>
+
+    {% if array %}
+        {% for value in array %}
+        <p>{{ value }}</p>
+        {% endfor %}
+    {% else %}
+    <p>Array is empty</p>
+    {% endif %}
+</body>
+</html>

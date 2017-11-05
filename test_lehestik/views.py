@@ -1,7 +1,11 @@
 from django.http import HttpResponse
-#from django.template import loader
+from django.template import loader
 
 
 def index(request):
-    #template = loader.get_template('')
-    return HttpResponse("<h1>Hello World</h1>")
+    array = ['test1', 'test2']
+    template = loader.get_template('test_lehestik/index.html')
+    context = {
+        'array': array,
+    }
+    return HttpResponse(template.render(context, request))
