@@ -29,7 +29,7 @@ class dokmeta(models.Model):
     haridus = models.CharField(max_length=10)
     abivahendid = models.CharField(max_length=10)
     
-def dokarvud(models.Model):
+class dokarvud(models.Model):
     kood = models.CharField(max_length=30, primary_key=True)
     tahti = models.IntegerField(default=0)
     sonu = models.IntegerField(default=0)
