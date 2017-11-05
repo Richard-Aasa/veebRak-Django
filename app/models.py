@@ -1,6 +1,6 @@
 from django.db import models
 
-class Births(models.Model):
+class Birth(models.Model):
     county = models.CharField(max_length=200)
     y2005 = models.IntegerField(default=0)
     y2006 = models.IntegerField(default=0)
