@@ -47,4 +47,10 @@ python manage.py sqlmigrate app 0001
 python manage.py migrate
 ```
 
+## Admin
+Administreerimise paneel nõuab ./app/admin.py faili redigeerimist, kui lisatakse uus mudel. 
+Vaikmisi kättesaadaval  
+```
+localhost:8000/admin/
+```
 
