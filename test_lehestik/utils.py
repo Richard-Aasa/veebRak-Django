@@ -34,10 +34,10 @@ def save_dok_meta_objects(data_string):
         dok_meta.abivahendid = attribute[12]
         #dok_meta_list.append(dok_meta)
 
-        dok_meta_dict[dok_meta.kood] = dok_meta
+        key_exists = dok_meta_dict.get(dok_meta.kood, "null")
+        if (key_exists == "null"):
+            dok_meta_dict[dok_meta.kood] = dok_meta
 
-        #if (dok_meta_dict.get('test'))
         #dok_meta.save();
-        #print(dok_meta)
 
     return dok_meta_list
