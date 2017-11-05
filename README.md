@@ -16,7 +16,7 @@ Käivitada .*/ kaustas veebiserver käsuga
 python manage.py runserver
 ```
 
-Mudelid ja vaated kaustas ./app
+Mudelid ja vaated kaustas ./app 
 Projekti seadistamine (kuhu mingi URL viitab) tehakse läbi ./projekt/urls.py faili
 
 ## Andmebaas
@@ -31,8 +31,8 @@ Väljumiseks SQLite seest
 ```
 
 ## Mudelid
-Mudelid asuvad ./app/models.py kaustas
-Peale mudeli loomist tuleb see migreerida andmebaasi
+Mudelid asuvad ./app/models.py kaustas 
+Peale mudeli loomist tuleb see migreerida andmebaasi 
 Alguses loome n.ö juhendi migreerimiseks
 ```
 python manage.py makemigrations app
