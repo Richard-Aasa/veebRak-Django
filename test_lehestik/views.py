@@ -1,7 +1,7 @@
 from django.http import HttpResponse
-from django.template import loader
+#from django.template import loader
 
 
 def index(request):
-    template = loader.get_template('')
+    #template = loader.get_template('')
     return HttpResponse("<h1>Hello World</h1>")
