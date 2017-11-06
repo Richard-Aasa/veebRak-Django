@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from . import utils
+from . import models
 
 def index(request):
     return render(
@@ -12,15 +13,15 @@ def index(request):
     )
 
 def manyToManyTable(request):
-    dokarvud = utils.read_from_file("http://www.tlu.ee/~jaagup/andmed/keel/korpus/dokarvud.txt")
-    dokmeta = utils.read_from_file("http://www.tlu.ee/~jaagup/andmed/keel/korpus/dokmeta.txt")    
+    omanikud = utils.save_omanikud(utils.read_from_file("http://www.tlu.ee/~jankos/andmed/omanikud.txt"))
+    raamatud = utils.save_raamatud(utils.read_from_file("http://www.tlu.ee/~jankos/andmed/raamatud.txt"))
     
     return render(
         request,
         'app/manyToManyTable.html',
         {
             'title':'manytomany',
-            'dokarvud':dokarvud,
-            'dokmeta':dokmeta,
+            'raamatud':raamatud,
+            'omanikud':omanikud,
         }
     )
