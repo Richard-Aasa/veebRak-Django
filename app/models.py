@@ -14,3 +14,13 @@ class Birth(models.Model):
     y2014 = models.IntegerField(default=0)
     y2015 = models.IntegerField(default=0)
 
+class Calories(models.Model):
+    food_item = models.CharField(max_length=200)
+    calories = models.IntegerField(default=0)
+
+class Diary(models.Model):
+    user = models.CharField(max_length=200)
+    food_item = models.CharField(max_length=200)
+    amount = models.IntegerField(default=0)
+    calories = models.IntegerField(default=0)
+    date_added = models.DateField(blank=True, null=True)
