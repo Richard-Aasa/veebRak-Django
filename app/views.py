@@ -13,15 +13,18 @@ def index(request):
     )
 
 def manyToManyTable(request):
-    omanikud = utils.save_omanikud(utils.read_from_file("http://www.tlu.ee/~jankos/andmed/omanikud.txt"))
-    raamatud = utils.save_raamatud(utils.read_from_file("http://www.tlu.ee/~jankos/andmed/raamatud.txt"))
+    utils.save_omanikud(utils.read_from_file("http://www.tlu.ee/~jankos/andmed/omanikud.txt"))
+    utils.save_raamatud(utils.read_from_file("http://www.tlu.ee/~jankos/andmed/raamatud.txt"))
+    
+    omanikud = models.omanikud.objects.all();
+    raamatud = models.raamatud.objects.all();
     
     return render(
         request,
         'app/manyToManyTable.html',
         {
             'title':'manytomany',
-            'raamatud':raamatud,
             'omanikud':omanikud,
+            'raamatud':raamatud,
         }
     )
