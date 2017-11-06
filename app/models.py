@@ -14,6 +14,7 @@ class Birth(models.Model):
     y2014 = models.IntegerField(default=0)
     y2015 = models.IntegerField(default=0)
 
+
 class dokmeta(models.Model):
     kood = models.CharField(max_length=255)
     korpus = models.CharField(max_length=255)
@@ -43,3 +44,15 @@ class dokarvud(models.Model):
     kolmesonalistepr = models.FloatField(default=0)
     kuuekuni9sonalistepr = models.FloatField(default=0)
     kymnekuni20sonalistepr = models.FloatField(default=0)
+
+class Calories(models.Model):
+    food_item = models.CharField(max_length=200)
+    calories = models.IntegerField(default=0)
+
+class Diary(models.Model):
+    user = models.CharField(max_length=200)
+    food_item = models.CharField(max_length=200)
+    amount = models.IntegerField(default=0)
+    calories = models.IntegerField(default=0)
+    date_added = models.DateField(blank=True, null=True)
+
